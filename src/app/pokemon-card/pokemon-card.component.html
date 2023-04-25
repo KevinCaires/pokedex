@@ -6,7 +6,7 @@
   </div>
 
   <div class="pokemon-card__number">
-    N°{{ pokemon.number }}
+    N° {{ leadingZero(pokemon.number) }}
   </div>
 
   <div class="pokemon-card__name">
@@ -15,7 +15,7 @@
 
   <div class="pokemon-card__types">
     <div
-    class="pokemon-card__type pokemon-card__type--{{type.toLowerCase()}}"
+    class="pokemon-card__type pokemon-card__type--{{ type.toLowerCase() }}"
     *ngFor="let type of pokemon.types"
     >{{ type }}</div>
   </div>

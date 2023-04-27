@@ -16,7 +16,6 @@ export class PokemonService {
     this.httpClient.get<any>(baseUrl).pipe(
       map(value => value.results),
       map((value: any) => {
-        console.log(value);
         return from(value).pipe(
           mergeMap((res: any) => this.httpClient.get(res.url))
         )
